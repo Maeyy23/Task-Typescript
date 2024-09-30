@@ -20,8 +20,8 @@ const createCustomer = async (payload: ICustomer) => {
 
 const createService = async (payload: IService) => {
   try {
-    await Service.create(payload);
-    return responses.successMessage("Saved successfully", 201);
+    const service = await Service.create(payload);
+    return responses.successMessage("Saved successfully", 201, service);
   } catch (error) {
     console.error("There was an error", error);
     return responses.failureMessage("Unable to create the service", 500);

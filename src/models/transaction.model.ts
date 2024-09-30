@@ -4,12 +4,12 @@ import { ITransaction } from "../@types/types";
 const transactionSchema = new mongoose.Schema<ITransaction>(
   {
     customerId: {
-      types: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Customer",
       required: true,
     },
     serviceId: {
-      types: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Service",
       required: true,
     },
@@ -35,4 +35,4 @@ const transactionSchema = new mongoose.Schema<ITransaction>(
   }
 );
 
-export default mongoose.model<ITransaction>("Transactions", transactionSchema);
+export default mongoose.model<ITransaction>("Transaction", transactionSchema);
