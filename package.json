@@ -1,0 +1,30 @@
+{
+  "name": "typescript-assignment",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "prod": "npm run build && npm start"
+  },
+  "author": "MABEL OBOCHI",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "typescript": "^5.6.2"
+  }
+}
